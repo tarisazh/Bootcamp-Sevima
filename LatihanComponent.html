@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Pada React</title>
+
+        <!--Library React-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script> 
+        <!--Menerjemahkan kode JSX menjadi Javascript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+</head>
+<body>
+    <!--Tempat untuk melakukan proses render-->
+    <div id="root"></div>
+    <!--Merubah ke babel-->
+    <script type="text/babel">
+        {/*Fungsi Halo menggunakan props atau properti */}
+        function Halo(props){
+            return <h1>Halo, saya {props.nama}</h1>;
+        }
+
+        {/*Komponen Kenalan yang memanggil fungsi Halo*/}
+        class Kenalan extends React.Component {
+            render(){
+                return (
+                    <div>
+                        {/*Menggunakan fungsi Halo*/}
+                        <Halo nama={this.props.nama} />
+                        <h2>Saya dari {this.props.kota}</h2>
+                    </div>
+                );
+            }
+        }
+        {/*Elemen yang akan ditampilkan sesuai dengan komponen*/}
+        const element = (
+            <div>
+                <Kenalan nama="Tarisa" kota="Sidoarjo" />
+                <Kenalan nama="Kaesang" kota="Banjarnegara" />
+            </div>
+        );
+        ReactDOM.render(element, document.getElementById('root'));
+        {/*
+            PENJELASAN
+            =>  Komponen digunakan sebagai template atau proses yang bisa digunakan kembali
+                apabila menggunakan props atau state kita harus menambahkan element baru untuk 
+                menampilkan.
+            =>  Elemen adalah hasil akhir render atau program yang memberitahu untuk apa yang 
+                akan ditampilkan 
+        */}
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum3 Array</title>
+</head>
+<body>
+    <script>
+        // Soal 1
+        document.write("Soal 1 <br>");
+        let number = [1 , 2 , 3 , 4 , 5];
+        let arrayNumber = number.map (num => num *2);
+        document.write(arrayNumber + "<br>");
+
+        document.write("<br>");
+
+        // Soal 2
+        document.write("Soal 2 <br>");
+        let fruits = [" alpukat ", " mangga " , " pisang "];
+        fruits.push("buah naga");
+        fruits.pop();
+        document.write(fruits + "<br>");
+
+        document.write("<br>");
+
+        // Soal 3
+        document.write("Soal 3 <br>");
+        let grades = [85 ,92 ,75 ,60 ,95];
+        let grades80 = grades.filter(nilai => nilai >80);
+        document.write(grades80 + "<br>");
+
+        document.write("<br>");
+
+        // Soal 4
+        document.write("Soal 4 <br>");
+        let scores = [5 ,10 , 15, 20];
+        let penjumlahan = scores.reduce((acc, curr) => acc + curr, 0);
+        document.write(penjumlahan + "<br>");
+
+        document.write("<br>");
+
+        // Soal 5
+        document.write("Soal 5 <br>");
+        let words = [" JavScript " ," Python " ," HTML " ," CSS "];
+        words.forEach((words) => document.write(words + ","));
+        
+        // Apabila di console
+        words.forEach((words) => console.log(words));
+    </script>
+</body>
+</html>

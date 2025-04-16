@@ -1,0 +1,169 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 40px 60px;
+    background-color: #fefcfb;
+  }
+  
+  .hero__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hero__logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .hero__nav {
+    flex: 1;
+    margin-left: 60px;
+  }
+
+  .hero__menu {
+    display: flex;  
+    gap: 20px;
+    list-style: none;
+    justify-content: flex-end;
+  }
+  
+  .hero__menu-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .hero__menu-item a:hover {
+    color: orange;
+  }
+  
+  .hero__dropdown-icon {
+    font-size: 10px;
+    margin-left: 4px;
+  }
+  
+  .hero__content {
+    margin-top: 60px;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+ /* Hero Image */
+  .hero__image {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .hero__image-img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Hero Text */
+  .hero__text {
+    max-width: 600px;
+  }
+  
+  .hero__subtitle {
+    color: orange;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .hero__title {
+    font-size: 80px;
+    font-weight: 800;
+    color: #081735;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .hero__description {
+    font-size: 16px;
+    color: #5e5e5e;
+    margin-bottom: 30px;
+  }
+
+  .hero__play {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* GANTI jadi lebih kecil */
+    cursor: pointer;
+  }
+  
+
+   .hero__button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .hero__button {
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  
+  /* Primary Button */
+  .hero__button--primary {
+    background-color: #f5a100;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(245, 161, 0, 0.2);
+  }
+  
+  /* Secondary Button */
+  .hero__button--secondary {
+    background: none;
+    color: #666;
+    padding: 8px;
+    gap: 8px;
+  }
+  
+  /* Play Icon */
+  .hero__icon {
+    background-color: #e0644c;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 8px 16px rgba(224, 100, 76, 0.2);
+  }
+  
+  /* Optional hover effects */
+  .hero__button--primary:hover {
+    background-color: #e29500;
+  }
+  
+  .hero__button--secondary:hover .cta__icon {
+    background-color: #d25945;
+  }
+  

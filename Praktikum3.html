@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 3</title>
+</head>
+<body>
+    <h3>Parameter Nama | Soal 1</h3>
+    <form>
+        <label for="nama">Greet :</label>
+        <input type="text" id="nama" required>
+        <button type="button" onclick="return greet();">Submit</button>
+    </form>
+    <p id="salam"></p>
+    <br>
+    <h3>Parameter Penjumlahan | Soal 2</h3>
+    <form>
+        <label for="angka1">Angka Pertama :</label>
+        <input type="text" id="angka1" required>
+        <label for="angka2">Angka Kedua :</label>
+        <input type="text" id="angka2" required>
+        <button type="button" onclick="return add();">Hitung</button>
+    </form>
+    <p id="jumlah"></p>
+    <br>
+    <h3>Parameter Number | Soal 3</h3>
+    <form>
+        <label for="number">Masukan Angka :</label>
+        <input type="text" id="number" required>
+        <button type="submit" onclick="return isEven();">Deteksi</button>
+    </form>
+    <p id="deteksi"></p>
+    <br>
+    <h3>Parameter Perkalian | Soal 4</h3>
+    <form>
+        <label for="input">Masukan Angka :</label>
+        <input type="text" id="input" required>
+        <button type="button" onclick="return multiplyArray();">Hitung</button>
+    </form>
+    <p id="output"></p>
+    <script>
+        function greet(){
+            const namaPengguna = document.getElementById("nama").value;
+            document.getElementById("salam").innerText = "Hello, " + namaPengguna + "!";
+        }
+
+        function add(){
+            let angka1 = parseInt(document.getElementById("angka1").value);
+            let angka2 = parseInt(document.getElementById("angka2").value);
+            let jumlah = angka1 + angka2;
+
+            document.getElementById("jumlah").innerText = "Hasil penjumlahan = " + jumlah;
+        }
+
+        function isEven(){
+            let number = parseInt(document.getElementById("number").value);
+
+            if (number % 2===0){
+                document.getElementById("deteksi").innerText = "True";
+                return false;
+            } else {
+                document.getElementById("deteksi").innerText = "False";
+                return false;
+            }
+        }
+
+        function multiplyArray(){
+            let input = document.getElementById("input").value;
+            // merubah dari input int menjadi array
+            const array = input.split(",").map(Number);
+            const result = array.reduce((accumulator, currenValue) => accumulator * currenValue, 1);
+
+            document.getElementById("output").innerText = "Hasil Perkalianya = " + result;
+        }
+    </script>
+</body>
+</html>

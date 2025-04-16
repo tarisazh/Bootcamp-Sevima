@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum4</title>
+</head>
+<body>
+    <script>
+        console.log("Soal 1")
+        class Mobil{
+           constructor(merek, model, tahun){
+            this.merek = "BMW";
+            this.model = "Terbaru";
+            this.tahun = "2022";
+           } 
+           getInfo(){
+            console.log("Mobil ini adalah " + this.merek + " " + this.model + " " + this.tahun);
+           }
+        };
+        const hasil = new Mobil();
+        hasil.getInfo();
+
+        console.log("Soal 2");
+        class PersegiPanjang{
+            constructor(panjang, lebar){
+                this.panjang = 5;
+                this.lebar = 2;
+            }
+            luas(){
+                let luas = this.panjang * this.lebar;
+                console.log("Luas persegi panjang adalah " + luas);
+            }
+            keliling(){
+                let keliling = 2 * (this.panjang + this.lebar);
+                console.log("Keliling persegi panjang adalah " + keliling);
+            }
+        };
+        const output = new PersegiPanjang();
+        output.luas();
+        output.keliling();
+
+        console.log("Soal 3");
+        class AkunBank{
+            constructor(nama, nomorRekening, saldo){
+                this.nama = "Tarisa";
+                this.nomorRekening = "123-456-789-000";
+                this.saldo = 10;             
+            }
+            setor(){
+                this.saldo += 50;
+                console.log("Saldo anda setelah setor 50 adalah " + this.saldo);
+            }
+            tarik(){
+                this.saldo -= 20;
+                console.log("Saldo anda setelah ditarik 20 adalah " + this.saldo);
+            }
+            cekSaldo(){
+                console.log("Saldo anda saat ini adalah " + this.saldo);
+            }
+        };
+        const bank = new AkunBank();
+        bank.setor();
+        bank.tarik();
+        bank.cekSaldo();
+
+        let mahasiswa = {
+            nama : "Mirza",
+            jurusan : "Teknik Informatika",
+            perkenalan: function() {
+                console.log('Halo, nama saya ${this.nama}');
+            }
+        };
+        mahasiswa.perkenalan();
+    </script>
+</body>
+</html>
